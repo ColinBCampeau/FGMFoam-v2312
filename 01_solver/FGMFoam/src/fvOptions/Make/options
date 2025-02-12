@@ -1,0 +1,32 @@
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/fileFormats/lnInclude \
+    -I$(LIB_SRC)/surfMesh/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/sampling/lnInclude \
+    -I$(LIB_SRC)/transportModels \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(LIB_SRC)/transportModels/incompressible/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_FGM_SRC)/thermophysicalModels/solidThermo/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/reactionThermo/lnInclude \
+    -I$(LIB_FGM_SRC)/TurbulenceModels/turbulenceModels/lnInclude \
+    -I$(LIB_FGM_SRC)/TurbulenceModels/compressible/lnInclude \
+    -I$(LIB_SRC)/TurbulenceModels/incompressible/lnInclude \
+    -I$(LIB_SRC)/overset/lnInclude
+
+LIB_LIBS = \ 
+ -L$(FOAM_USER_LIBBIN) \
+    -lfiniteVolume \
+    -lfileFormats \
+    -lsurfMesh \
+    -lmeshTools \
+    -lsampling \
+    -lfluidThermophysicalModels \
+    -lFGMFoamSolidThermo \
+    -lFGMFoamTurbulenceModels \
+    -lincompressibleTurbulenceModels \
+    -lFGMFoamCompressibleTurbulenceModels \
+    -lFGMFoamReactionThermophysicalModels \
+    -loverset
